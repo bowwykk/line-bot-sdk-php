@@ -42,7 +42,7 @@ foreach ($client->parseEvents() as $event) {
                     break;
                 case 'image':
                     error_log('========image=======');
-                    \Log::info(print_r($event, true));
+                    var_dump($event, true);
                     $client->replyMessage([
                         'replyToken' => $event['replyToken'],
                         'messages' => [
