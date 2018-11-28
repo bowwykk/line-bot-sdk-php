@@ -29,6 +29,7 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
+                    error_log('========text=======');
                     $client->replyMessage([
                         'replyToken' => $event['replyToken'],
                         'messages' => [
@@ -39,7 +40,8 @@ foreach ($client->parseEvents() as $event) {
                         ]
                     ]);
                     break;
-                case 'Image':
+                case 'image':
+                    error_log('========image=======');
                     $client->replyMessage([
                         'replyToken' => $event['replyToken'],
                         'messages' => [
