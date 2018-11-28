@@ -16,19 +16,16 @@
  * under the License.
  */
 
-// use LINE\LINEBot\KitchenSink\Dependency;
-// use LINE\LINEBot\KitchenSink\Route;
-// use LINE\LINEBot\KitchenSink\Setting;
+use LINE\LINEBot\KitchenSink\Dependency;
+use LINE\LINEBot\KitchenSink\Route;
+use LINE\LINEBot\KitchenSink\Setting;
 
-// require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
-// $setting = Setting::getSetting();
-// $app = new \Slim\App($setting);
+$setting = Setting::getSetting();
+$app = new \Slim\App($setting);
 
-// (new Route())->register($app);
-// (new Dependency())->register($app);
+(new Route())->register($app);
+(new Dependency())->register($app);
 
-// $app->run();
-
-
-echo 'ddd';
+$app->run();
