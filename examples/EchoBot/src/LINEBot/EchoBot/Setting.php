@@ -32,8 +32,8 @@ class Setting
                 ],
 
                 'bot' => [
-                    'channelToken' => getenv('LINEBOT_CHANNEL_TOKEN') ?: '<your channel token>',
-                    'channelSecret' => getenv('LINEBOT_CHANNEL_SECRET') ?: '<your channel secret>',
+                    'channelToken' => 'xYWwce1Yov/D+hm3t44Kh2O56s+uoLtWJI6cp9pC/EU1Iw8JwXEoKW0ojBSOh4QRm9tvvd1bWAE8gV4pxQeB234RqRFsQGNBVUXo/OyS7grsUP0nUiNVpVzS+AEFJnE74HvEjG7jek6stse12PAztwdB04t89/1O/w1cDnyilFU=',
+                    'channelSecret' => '18c44ec2d7cbaeef30ffe0f331a33f2b',
                 ],
 
                 'apiEndpointBase' => getenv('LINEBOT_API_ENDPOINT_BASE'),
