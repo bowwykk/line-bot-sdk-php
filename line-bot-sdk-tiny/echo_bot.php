@@ -21,9 +21,8 @@ require_once('./LINEBotTiny.php');
 $channelAccessToken = 'xYWwce1Yov/D+hm3t44Kh2O56s+uoLtWJI6cp9pC/EU1Iw8JwXEoKW0ojBSOh4QRm9tvvd1bWAE8gV4pxQeB234RqRFsQGNBVUXo/OyS7grsUP0nUiNVpVzS+AEFJnE74HvEjG7jek6stse12PAztwdB04t89/1O/w1cDnyilFU=';
 $channelSecret = '18c44ec2d7cbaeef30ffe0f331a33f2b';
 
-echo 'Hello LINEBotTiny';
-
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
+
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
@@ -36,6 +35,17 @@ foreach ($client->parseEvents() as $event) {
                             [
                                 'type' => 'text',
                                 'text' => $message['text']
+                            ]
+                        ]
+                    ]);
+                    break;
+                case 'Image':
+                    $client->replyMessage([
+                        'replyToken' => $event['replyToken'],
+                        'messages' => [
+                            [
+                                'type' => 'text',
+                                'text' => $message['id']
                             ]
                         ]
                     ]);
