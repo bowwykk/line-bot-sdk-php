@@ -39,7 +39,8 @@
     "squizlabs/php_codesniffer": "~2.6||^3",
     "indigophp/hash-compat": "~1.1.0",
     "symfony/config": "^3.3",
-    "symfony/dependency-injection": "^3.3"
+    "symfony/dependency-injection": "^3.3",
+    "heroku/heroku-buildpack-php": "*"
   },
   "suggest": {
     "apigen/apigen": "Install with roave/better-reflection:dev-master to generate docs",
